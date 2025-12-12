@@ -1,0 +1,140 @@
+[
+  {
+    "id": 1,
+    "title": "Полный курс по веб-разработке 2024: HTML, CSS, JavaScript, React",
+    "author": "Максим Петров",
+    "category": "Разработка",
+    "difficulty":"Начальный",
+    "discount": 60,
+    "rating": 4.8,
+    "reviews": 12453,
+    "students": 45230,
+    "hours": 42,
+    "lessons": 156,
+    "price": 9950,
+    "oldPrice": 24900,
+    "image": "/images/webdev.jpg",
+    "description": "Полный курс по веб-разработке с нуля до профуровня...",
+    "program": [
+      "Основы HTML",
+      "Продвинутый CSS",
+      "JavaScript с нуля",
+      "React для начинающих"
+    ]
+  },
+  {
+    "id": 2,
+    "title": "MBA: Основы бизнеса и управления проектами для начинающих менеджеров",
+    "author": "Анна Смирнова",
+    "category": "Бизнес",
+    "difficulty":"Средний",
+    "discount": 58,
+    "rating": 4.7,
+    "reviews": 8934,
+    "students": 32100,
+    "hours": 28,
+    "lessons": 98,
+    "price": 12450,
+    "oldPrice": 29950,
+    "image": "/images/mba.jpg",
+    "description": "Курс для тех, кто хочет разобраться в управлении бизнесом...",
+    "program": [
+      "Введение в менеджмент",
+      "Стратегическое мышление",
+      "Работа с проектами",
+      "Финансовая грамотность"
+    ]
+  },
+  {
+    "id": 3,
+    "title": "UI/UX Дизайн: от основ до профессионального портфолио в Figma",
+    "author": "Дмитрий Козлов",
+    "category": "Дизайн",
+    "difficulty":"Продвинутый",
+    "discount": 55,
+    "rating": 4.9,
+    "reviews": 15672,
+    "students": 52890,
+    "hours": 35,
+    "lessons": 124,
+    "price": 8950,
+    "oldPrice": 19950,
+    "image": "/images/design.jpg",
+    "description": "Полный UI/UX курс по работе в Figma...",
+    "program": [
+      "Основы дизайна",
+      "UX исследование",
+      "Работа в Figma",
+      "Создание портфолио"
+    ]
+  },
+  {
+    "id": 4,
+    "title": "Цифровой маркетинг 2024: SMM, таргетированная реклама и аналитика",
+    "author": "Елена Волкова",
+    "category": "Маркетинг",
+    "difficulty":"Начальный",
+    "discount": 62,
+    "rating": 4.6,
+    "reviews": 9845,
+    "students": 38750,
+    "hours": 32,
+    "lessons": 112,
+    "price": 10950,
+    "oldPrice": 28950,
+    "image": "/images/marketing.jpg",
+    "description": "Полный курс по цифровому маркетингу с практическими кейсами...",
+    "program": [
+      "Основы интернет-маркетинга",
+      "Таргетированная реклама VK и Instagram",
+      "Google Analytics и Яндекс.Метрика",
+      "SMM стратегии и контент-план"
+    ]
+  },
+  {
+    "id": 5,
+    "title": "Data Science и Machine Learning: Python, анализ данных, нейросети",
+    "author": "Игорь Соколов",
+    "category": "Data Science",
+    "difficulty":"Средний",
+    "discount": 65,
+    "rating": 4.9,
+    "reviews": 11234,
+    "students": 29450,
+    "hours": 48,
+    "lessons": 168,
+    "price": 14450,
+    "oldPrice": 41450,
+    "image": "/images/datascience.jpg",
+    "description": "Изучите анализ данных и машинное обучение с нуля до уровня junior специалиста...",
+    "program": [
+      "Python для анализа данных",
+      "Pandas и NumPy",
+      "Машинное обучение с Scikit-learn",
+      "Глубокое обучение и нейронные сети"
+    ]
+  },
+  {
+    "id": 6,
+    "title": "Основы кибербезопасности: защита данных и этичный хакинг для начинающих",
+    "author": "Сергей Новиков",
+    "category": "Кибербезопасность",
+    "difficulty":"Продвинутый",
+    "discount": 57,
+    "rating": 4.8,
+    "reviews": 7621,
+    "students": 24680,
+    "hours": 38,
+    "lessons": 142,
+    "price": 11450,
+    "oldPrice": 26950,
+    "image": "/images/cybersecurity.jpg",
+    "description": "Научитесь защищать системы и данные от киберугроз, изучите основы этичного хакинга...",
+    "program": [
+      "Основы сетевой безопасности",
+      "Тестирование на проникновение",
+      "Криптография и защита данных",
+      "Практические кейсы и лабораторные работы"
+    ]
+  }
+]
