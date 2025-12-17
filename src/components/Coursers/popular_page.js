@@ -1,15 +1,13 @@
 import React, { useEffect, useState } from "react";
 import coursesData from "../data/courses.json";
-import { useNavigate } from "react-router-dom";
+import CourseCard from "./CourceCard";
+import "../Coursers/CourseCard.css";
 
-import "/Users/damirbeknazarov/notes/src/components/Coursers/CourseCard.css";
-
-function Pop() {
+function Pop({ searchQuery = "" }) {
   const [courses, setCourses] = useState([]);
   const [filteredCourses, setFilteredCourses] = useState([]);
   const [activeCategory, setActiveCategory] = useState("Все");
   const [activeDiff, setActiveDiff] = useState("Все");
-  const navigate = useNavigate();
   
   const categories = ["Все", "Разработка", "Бизнес", "Дизайн", "Маркетинг", "Data Science", "Кибербезопасность"];
   const difficult = ["Все", "Начальный", "Средний", "Продвинутый"];
@@ -19,9 +17,18 @@ function Pop() {
     setFilteredCourses(coursesData);
   }, []);
   
-  // Фильтрация при изменении категории или сложности
+  // Фильтрация при изменении категории, сложности или поиска
   useEffect(() => {
     let filtered = courses;
+    
+    // Фильтр по поиску
+    if (searchQuery.trim() !== "") {
+      filtered = filtered.filter(course =>
+        course.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        course.author.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        course.category.toLowerCase().includes(searchQuery.toLowerCase())
+      );
+    }
     
     // Фильтр по категории
     if (activeCategory !== "Все") {
@@ -34,7 +41,7 @@ function Pop() {
     }
     
     setFilteredCourses(filtered);
-  }, [activeCategory, activeDiff, courses]);
+  }, [activeCategory, activeDiff, courses, searchQuery]);
   
   return (
     <>
@@ -72,30 +79,16 @@ function Pop() {
       </div>
       
       <div className="courses_container">
-        {filteredCourses.map(course => (
-          <div 
-            key={course.id} 
-            className="course_card"
-            onClick={() => navigate(`/course/${course.id}`)}
-          >
-            <img src={course.image} alt={course.title} className="course_img" />
-            <span className="badge">{course.category}</span>
-            <span className="discount">-{course.discount}%</span>
-            <h3>{course.title}</h3>
-            <p>{course.author}</p>
-            <div className="stats">
-              ⭐ {course.rating} ({course.reviews})
-            </div>
-            <div className="meta">
-              <span>👥 {course.students}</span>
-              <span>⏱ {course.hours} ч</span>
-              <span>📚 {course.lessons} уроков</span>
-            </div>
-            <div className="price">
-              {course.price} ₸ <span className="old">{course.oldPrice} ₸</span>
-            </div>
+        {filteredCourses.length > 0 ? (
+          filteredCourses.map(course => (
+            <CourseCard key={course.id} course={course} />
+          ))
+        ) : (
+          <div style={{ gridColumn: '1 / -1', textAlign: 'center', padding: '40px' }}>
+            <h2>Курсы не найдены 😢</h2>
+            <p>Попробуйте изменить фильтры или поисковый запрос</p>
           </div>
-        ))}
+        )}
       </div>
     </>
   );

@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "title": "Полный курс по веб-разработке 2024: HTML, CSS, JavaScript, React",
+    "title": "Полный курс по веб-разработке 2025: HTML, CSS, JavaScript, React",
     "author": "Максим Петров",
     "category": "Разработка",
     "difficulty":"Начальный",
@@ -13,7 +13,7 @@
     "lessons": 156,
     "price": 9950,
     "oldPrice": 24900,
-    "image": "/images/webdev.jpg",
+    "image": "https://images.unsplash.com/photo-1675495277087-10598bf7bcd1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcm9ncmFtbWluZyUyMGNvZGUlMjBsYXB0b3B8ZW58MXx8fHwxNzY1NDEzMjI2fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
     "description": "Полный курс по веб-разработке с нуля до профуровня...",
     "program": [
       "Основы HTML",
@@ -36,7 +36,7 @@
     "lessons": 98,
     "price": 12450,
     "oldPrice": 29950,
-    "image": "/images/mba.jpg",
+    "image": "https://images.unsplash.com/photo-1496180470114-6ef490f3ff22?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxidXNpbmVzcyUyMG1lZXRpbmclMjBwcm9mZXNzaW9uYWx8ZW58MXx8fHwxNzY1NDE5MDExfDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
     "description": "Курс для тех, кто хочет разобраться в управлении бизнесом...",
     "program": [
       "Введение в менеджмент",
@@ -59,7 +59,7 @@
     "lessons": 124,
     "price": 8950,
     "oldPrice": 19950,
-    "image": "/images/design.jpg",
+    "image": "https://images.unsplash.com/photo-1510832758362-af875829efcf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkZXNpZ24lMjBjcmVhdGl2ZSUyMHdvcmtzcGFjZXxlbnwxfHx8fDE3NjUzNjYyOTd8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
     "description": "Полный UI/UX курс по работе в Figma...",
     "program": [
       "Основы дизайна",
@@ -70,7 +70,7 @@
   },
   {
     "id": 4,
-    "title": "Цифровой маркетинг 2024: SMM, таргетированная реклама и аналитика",
+    "title": "Цифровой маркетинг 2025: SMM, таргетированная реклама и аналитика",
     "author": "Елена Волкова",
     "category": "Маркетинг",
     "difficulty":"Начальный",
@@ -82,7 +82,7 @@
     "lessons": 112,
     "price": 10950,
     "oldPrice": 28950,
-    "image": "/images/marketing.jpg",
+    "image": "https://images.unsplash.com/photo-1579208717040-61d91b110191?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkaWdpdGFsJTIwbWFya2V0aW5nJTIwb2ZmaWNlfGVufDF8fHx8MTc2NTM4MDE3NHww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
     "description": "Полный курс по цифровому маркетингу с практическими кейсами...",
     "program": [
       "Основы интернет-маркетинга",
@@ -105,7 +105,7 @@
     "lessons": 168,
     "price": 14450,
     "oldPrice": 41450,
-    "image": "/images/datascience.jpg",
+    "image": "https://images.unsplash.com/photo-1666875753105-c63a6f3bdc86?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkYXRhJTIwc2NpZW5jZSUyMGFuYWx5dGljc3xlbnwxfHx8fDE3NjUzOTE0NTR8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
     "description": "Изучите анализ данных и машинное обучение с нуля до уровня junior специалиста...",
     "program": [
       "Python для анализа данных",
@@ -128,7 +128,7 @@
     "lessons": 142,
     "price": 11450,
     "oldPrice": 26950,
-    "image": "/images/cybersecurity.jpg",
+    "image": "https://images.unsplash.com/photo-1675495277087-10598bf7bcd1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcm9ncmFtbWluZyUyMGNvZGUlMjBsYXB0b3B8ZW58MXx8fHwxNzY1NDEzMjI2fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
     "description": "Научитесь защищать системы и данные от киберугроз, изучите основы этичного хакинга...",
     "program": [
       "Основы сетевой безопасности",

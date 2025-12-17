@@ -1,29 +1,31 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Header from "./components/Header/header";
 import Main from "./components/Main/main";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Courses from "./components/Coursers/сoursers";
 import Pop from "./components/Coursers/popular_page";
 import CoursePage from "./components/CoursePage/CoursePage";
+import MyStudy from "./components/my_study/mystudy";
 import './components/styles/App.css';
-import mystudy from "./components/my_study/mystudy"
+
 function App() {
+  const [searchQuery, setSearchQuery] = useState("");
+
   return (
     <BrowserRouter>
-      <Header />
+      <Header onSearchChange={setSearchQuery} />
       <Routes>
         <Route path="/" element={
           <>
             <Main />
-            <Pop />
+            <Pop searchQuery={searchQuery} />
           </>
         } />
 
-        <Route path="/courses" element={<Pop />} />
+        <Route path="/courses" element={<Pop searchQuery={searchQuery} />} />
 
         <Route path="/course/:id" element={<CoursePage />} />
 
-        <Route path="/mystudy" element={<mystudy />}/>
+        <Route path="/mystudy" element={<MyStudy />}/>
       </Routes>
     </BrowserRouter>
   );

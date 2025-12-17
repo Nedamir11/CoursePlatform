@@ -36,11 +36,10 @@ header{
   width: 35px;
   height: 35px;
 }
-
 .nav_items{
   display: flex;
   flex-direction: row;
-
+  margin: 0 auto;
   gap: 30px;
 
   list-style: none;
@@ -86,9 +85,13 @@ header{
 
 .main_section{
   width: 100%;
-  height: 564px;
+  height: 700px;
   background: linear-gradient(to right ,#2D5CF2,#8B2CF1);
   color: white;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
 }
 
@@ -104,6 +107,8 @@ header{
   height: 300px;
   background-color: black;
   margin: 40px;
+
+  border-radius: 15px;
 }
 .texts{
   display: block;
@@ -184,6 +189,8 @@ header{
   border: 1px solid rgba(0, 0, 0, 0.188);
   padding: 30px;
   margin: 0 auto;
+
+
 
 }
 

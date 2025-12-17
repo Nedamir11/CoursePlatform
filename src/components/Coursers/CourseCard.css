@@ -5,9 +5,9 @@ body{
 .courses_container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 150px;
+  gap: 100px;
   padding: 25px;
-  max-width: 1200px;
+  max-width: 1300px;
   margin: 0 auto;
 }
 

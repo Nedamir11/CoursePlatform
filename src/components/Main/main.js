@@ -1,26 +1,10 @@
 import React, { useState } from "react";
-import "/Users/damirbeknazarov/notes/src/components/styles/App.css";
+import { useNavigate } from "react-router-dom";
+import "../styles/App.css";
 
 
 function Main(){
-    const [activeCategory, setActiveCategory] = useState("Все");
-    const [activeDiff, setActiveDiff] = useState("Все уровни");
-
-    const categories = [
-        "Все",
-        "Разработка",
-        "Бизнес",
-        "Дизайн",
-        "Data Science",
-        "Маркетинг"
-    ];
-
-    const difficult = [
-        "Все уровни",
-        "Начинающий",
-        "Средний",
-        "Продвинутый"
-    ]
+      const navigate = useNavigate();
     return(
 
         <>
@@ -31,7 +15,7 @@ function Main(){
                         <p style={{fontSize:"20px"}}>Получите доступ к тысячам онлайн-курсов от ведущих экспертов. Развивайте свои навыки и достигайте новых карьерных высот.</p>
                         
                         <div className="buttons">
-                            <button className="StartEdu">Начать обучение</button>
+                            <button className="StartEdu" onClick={() => navigate('/courses')}>Начать обучение</button>
                             <button className="how_it_works">Как это работает?</button>
                         </div>
 
@@ -53,8 +37,8 @@ function Main(){
 
                         </div>
                     </div>
-                    <div className="mainimage">
-                        
+                    <div className="">
+                        <img className="mainimage" src="https://images.unsplash.com/photo-1759984782106-4b56d0aa05b8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxvbmxpbmUlMjBsZWFybmluZyUyMHN0dWRlbnR8ZW58MXx8fHwxNzY1MzczMDU1fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"></img>
                     </div>
                 </div>
             </section>

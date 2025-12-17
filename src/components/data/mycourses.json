@@ -1,0 +1,25 @@
+[
+    {
+    "id": 1,
+    "title": "Python с нуля ( Beginner )",
+    "author": "Андрей Смаев",
+    "category": "Разработка",
+    "difficulty":"Начальный",
+    "discount": 20,
+    "rating": 5.0,
+    "reviews": 10500,
+    "students": 12000,
+    "hours": 50,
+    "lessons": 156,
+    "price": 9950,
+    "oldPrice": 24900,
+    "image": "/images/webdev.jpg",
+    "description": "Полный курс по веб-разработке с нуля до профуровня...",
+    "program": [
+      "Переменные",
+      "Циклы",
+      "Функции",
+      "Первый проект"
+    ]
+    }
+]

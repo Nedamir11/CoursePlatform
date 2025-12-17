@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import coursesData from "../data/courses.json";
 import { useNavigate } from "react-router-dom";
 
-import "/Users/damirbeknazarov/notes/src/components/Coursers/CourseCard.css";
+import "../components/Coursers/CourseCard.css";
 
 function Courses() {
   const [courses, setCourses] = useState([]);
@@ -19,16 +19,13 @@ function Courses() {
     setFilteredCourses(coursesData);
   }, []);
   
-  // Фильтрация при изменении категории или сложности
   useEffect(() => {
     let filtered = courses;
     
-    // Фильтр по категории
     if (activeCategory !== "Все") {
       filtered = filtered.filter(course => course.category === activeCategory);
     }
     
-    // Фильтр по сложности
     if (activeDiff !== "Все") {
       filtered = filtered.filter(course => course.difficulty === activeDiff);
     }
