@@ -17,27 +17,24 @@ function CoursePage() {
   }, [id]);
 
   const toggleCourse = () => {
-  const savedCourses = localStorage.getItem('myCourses');
-  let courseIds = savedCourses ? JSON.parse(savedCourses) : [];
+    const savedCourses = localStorage.getItem('myCourses');
+    let courseIds = savedCourses ? JSON.parse(savedCourses) : [];
+    const savedMyCourses = localStorage.getItem('mycourses');
+    let myCoursesList = savedMyCourses ? JSON.parse(savedMyCourses) : [];
 
-  // 👉 mycourses (курсы для MyStudy)
-  const savedMyCourses = localStorage.getItem('mycourses');
-  let myCoursesList = savedMyCourses ? JSON.parse(savedMyCourses) : [];
+    if (isAdded) {
+      courseIds = courseIds.filter(courseId => courseId !== Number(id));
+      myCoursesList = myCoursesList.filter(c => c.id !== Number(id));
+      setIsAdded(false);
+    } else {
+      courseIds.push(Number(id));
+      myCoursesList.push(course);
+      setIsAdded(true);
+    }
 
-  if (isAdded) {
-    courseIds = courseIds.filter(courseId => courseId !== Number(id));
-    myCoursesList = myCoursesList.filter(c => c.id !== Number(id));
-    setIsAdded(false);
-  } else {
-    courseIds.push(Number(id));
-    myCoursesList.push(course);
-    setIsAdded(true);
-  }
-
-  localStorage.setItem('myCourses', JSON.stringify(courseIds));
-  localStorage.setItem('mycourses', JSON.stringify(myCoursesList));
-};
-
+    localStorage.setItem('myCourses', JSON.stringify(courseIds));
+    localStorage.setItem('mycourses', JSON.stringify(myCoursesList));
+  };
 
   if (!course) return (
     <div style={{ textAlign: 'center', padding: '100px 20px' }}>
@@ -48,16 +45,15 @@ function CoursePage() {
   return (
     <div className="course_page">
       <img src={course.image} alt={course.title} className="big_image" />
-      
+
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '20px' }}>
         <h1>{course.title}</h1>
         <button
-  className={`professional-btn ${isAdded ? 'red' : ''}`}
-  onClick={toggleCourse}
->
-  {isAdded ? '❌ Удалить из обучения' : '➕ Добавить в мое обучение'}
-</button>
-
+          className={`professional-btn ${isAdded ? 'red' : ''}`}
+          onClick={toggleCourse}
+        >
+          {isAdded ? '❌ Удалить из обучения' : '➕ Добавить в мое обучение'}
+        </button>
       </div>
 
       <p><b>Автор:</b> {course.author}</p>

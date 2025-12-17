@@ -1,6 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import logo from "/Users/damirbeknazarov/notes/src/components/assets/images/logo.png";
+import logo from "../assets/images/logo.png";
 import '../styles/App.css';
 
 function Header({ onSearchChange }) {
@@ -17,7 +17,7 @@ function Header({ onSearchChange }) {
       <div className="navbar">
         <div className="logo_items" onClick={() => navigate("/")} style={{cursor: "pointer"}}>
           <img src={logo} alt="logo" className="logo" />
-          <span style={{fontSize:"25px"}}>CoursePlatform</span>  
+          <span style={{fontSize:"25px"}}>CoursePlatform</span>
         </div>
         <div className="navigation">
           <ul className="nav_items">
@@ -33,9 +33,9 @@ function Header({ onSearchChange }) {
           </ul>
         </div>
         <div className="search-panel">
-          <input 
-            type="search" 
-            placeholder="Поиск курсов" 
+          <input
+            type="search"
+            placeholder="Поиск курсов"
             className="search_in"
             onChange={handleSearch}
           />

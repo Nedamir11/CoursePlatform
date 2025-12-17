@@ -17,11 +17,9 @@ function Pop({ searchQuery = "" }) {
     setFilteredCourses(coursesData);
   }, []);
   
-  // Фильтрация при изменении категории, сложности или поиска
   useEffect(() => {
     let filtered = courses;
     
-    // Фильтр по поиску
     if (searchQuery.trim() !== "") {
       filtered = filtered.filter(course =>
         course.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -30,12 +28,10 @@ function Pop({ searchQuery = "" }) {
       );
     }
     
-    // Фильтр по категории
     if (activeCategory !== "Все") {
       filtered = filtered.filter(course => course.category === activeCategory);
     }
     
-    // Фильтр по сложности
     if (activeDiff !== "Все") {
       filtered = filtered.filter(course => course.difficulty === activeDiff);
     }
