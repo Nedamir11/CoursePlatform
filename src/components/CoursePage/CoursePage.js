@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import coursesData from "../data/courses.json";
-import "../components/CoursePage/CoursePage.css"
+import "../CoursePage/CoursePage.css"
 
 function CoursePage() {
   const { id } = useParams();
@@ -9,7 +9,6 @@ function CoursePage() {
   const [isAdded, setIsAdded] = useState(false);
 
   useEffect(() => {
-    // Проверяем, добавлен ли курс
     const savedCourses = localStorage.getItem('myCourses');
     if (savedCourses) {
       const courseIds = JSON.parse(savedCourses);
@@ -18,19 +17,27 @@ function CoursePage() {
   }, [id]);
 
   const toggleCourse = () => {
-    const savedCourses = localStorage.getItem('myCourses');
-    let courseIds = savedCourses ? JSON.parse(savedCourses) : [];
-    
-    if (isAdded) {
-      courseIds = courseIds.filter(courseId => courseId !== Number(id));
-      setIsAdded(false);
-    } else {
-      courseIds.push(Number(id));
-      setIsAdded(true);
-    }
-    
-    localStorage.setItem('myCourses', JSON.stringify(courseIds));
-  };
+  const savedCourses = localStorage.getItem('myCourses');
+  let courseIds = savedCourses ? JSON.parse(savedCourses) : [];
+
+  // 👉 mycourses (курсы для MyStudy)
+  const savedMyCourses = localStorage.getItem('mycourses');
+  let myCoursesList = savedMyCourses ? JSON.parse(savedMyCourses) : [];
+
+  if (isAdded) {
+    courseIds = courseIds.filter(courseId => courseId !== Number(id));
+    myCoursesList = myCoursesList.filter(c => c.id !== Number(id));
+    setIsAdded(false);
+  } else {
+    courseIds.push(Number(id));
+    myCoursesList.push(course);
+    setIsAdded(true);
+  }
+
+  localStorage.setItem('myCourses', JSON.stringify(courseIds));
+  localStorage.setItem('mycourses', JSON.stringify(myCoursesList));
+};
+
 
   if (!course) return (
     <div style={{ textAlign: 'center', padding: '100px 20px' }}>

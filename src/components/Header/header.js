@@ -1,7 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import logo from "/Users/damirbeknazarov/notes/src/components/assets/images/logo.png";
-import '../components/styles/App.css';
+import '../styles/App.css';
 
 function Header({ onSearchChange }) {
   const navigate = useNavigate();
