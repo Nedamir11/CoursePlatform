@@ -17,24 +17,22 @@ function CoursePage() {
   }, [id]);
 
   const toggleCourse = () => {
-    const savedCourses = localStorage.getItem('myCourses');
-    let courseIds = savedCourses ? JSON.parse(savedCourses) : [];
-    const savedMyCourses = localStorage.getItem('mycourses');
-    let myCoursesList = savedMyCourses ? JSON.parse(savedMyCourses) : [];
+  const saved = localStorage.getItem("mycourses");
+  let list = saved ? JSON.parse(saved) : [];
 
-    if (isAdded) {
-      courseIds = courseIds.filter(courseId => courseId !== Number(id));
-      myCoursesList = myCoursesList.filter(c => c.id !== Number(id));
-      setIsAdded(false);
-    } else {
-      courseIds.push(Number(id));
-      myCoursesList.push(course);
-      setIsAdded(true);
-    }
+  const exists = list.find(c => c.id === course.id);
 
-    localStorage.setItem('myCourses', JSON.stringify(courseIds));
-    localStorage.setItem('mycourses', JSON.stringify(myCoursesList));
-  };
+  if (exists) {
+    list = list.filter(c => c.id !== course.id);
+    setIsAdded(false);
+  } else {
+    list.push(course);
+    setIsAdded(true);
+  }
+
+  localStorage.setItem("mycourses", JSON.stringify(list));
+};
+
 
   if (!course) return (
     <div style={{ textAlign: 'center', padding: '100px 20px' }}>
